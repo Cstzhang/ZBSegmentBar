@@ -9,28 +9,38 @@
 #import "ZBSegmentBarViewController.h"
 #import "UIView+ZBSegmentBar.h"
 #import "ZBSegmentBar.h"
-@interface ZBSegmentBarViewController ()
-
+@interface ZBSegmentBarViewController ()<ZBSegmentBarDelegate>
+@property (nonatomic, weak) ZBSegmentBar *segmentBar;
 @end
 
 @implementation ZBSegmentBarViewController
+- (ZBSegmentBar *)segmentBar {
+    if (!_segmentBar) {
+        CGRect frame = CGRectMake(0, 20, self.view.width, 35);
+        ZBSegmentBar *segmentBar = [ZBSegmentBar segmentBarWithFrame:frame];
+        segmentBar.delegate = self;
+        segmentBar.backgroundColor = [UIColor brownColor];
+        [self.view addSubview:segmentBar];
+        _segmentBar = segmentBar;
+        
+    }
+    return _segmentBar;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CGRect frame = CGRectMake(0, 20, self.view.width, 35);
-    ZBSegmentBar *segmentBar = [ZBSegmentBar segmentBarWithFrame:frame];
-    segmentBar.backgroundColor = [UIColor redColor];
-    [self.view addSubview:segmentBar];
-   // segmentBar.items = @[@"专辑", @"声音", @"下载中", @"已完成",@"已删除"];
-    segmentBar.items = @[@"1专辑", @"1声音", @"1下载中", @"1已完成",@"1已删除",@"2专辑", @"2声音", @"2下载中", @"2已完成",@"2已删除",@"3专辑", @"3声音", @"3下载中", @"3已完成",@"3已删除"];
-   //    segmentBar.items = @[@"专辑", @"声音", @"下载中"];
+    
+    self.segmentBar.items = @[@"1专辑", @"1声音", @"1下载中", @"1已完成",@"1已删除",@"2专辑", @"2声音", @"2下载中", @"2已完成",@"2已删除",@"3专辑", @"3声音", @"3下载中", @"3已完成",@"3已删除"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.segmentBar.selectIndex = 3;
+}
+
+-(void)segmentBar:(ZBSegmentBar *)segmentBar didSelectIndex:(NSInteger)toIndex fromIndex:(NSInteger)fromIndex{
+    
+    NSLog(@"fromIndex :%zd---- toIndex:%zd", fromIndex, toIndex);
 }
 
 @end

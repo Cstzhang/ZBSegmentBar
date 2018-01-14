@@ -11,6 +11,8 @@
 
 /// space min width
 #define kMinMargin 30
+/// Indicator height
+#define KIndicatorH 2
 
 @interface ZBSegmentBar (){
     /// the last clicked title button
@@ -56,13 +58,22 @@
  */
 - (UIView *)indicatorView {
     if (!_indicatorView) {
-        CGFloat indicatorH = 2;
-        UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - indicatorH, 0, indicatorH)];
+        UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - KIndicatorH, 0, KIndicatorH)];
         indicatorView.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:indicatorView];
         _indicatorView = indicatorView;
     }
     return _indicatorView;
+}
+
+- (void)setSelectIndex:(NSInteger)selectIndex {
+    // data filtering
+    if (self.itemBtns.count == 0 || selectIndex < 0 || selectIndex > self.itemBtns.count - 1) {
+        return;
+    }
+    _selectIndex = selectIndex;
+    UIButton *btn = self.itemBtns[selectIndex];
+    [self btnClick:btn];
 }
 
 /**
@@ -78,6 +89,7 @@ set title items
     // add item buttons in content view
     for (NSString *item in items) {
         UIButton *btn = [[UIButton alloc] init];
+        btn.tag = self.itemBtns.count;// add button tags
         [btn addTarget:self action:@selector(btnClick:)    forControlEvents:UIControlEventTouchDown];
         [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
@@ -97,6 +109,12 @@ set title items
  @param btn button clicked
  */
 - (void)btnClick: (UIButton *)btn {
+    // 0. delegate func
+    if ([self.delegate respondsToSelector:@selector(segmentBar:didSelectIndex:fromIndex:)]) {
+        [self.delegate segmentBar:self didSelectIndex:btn.tag fromIndex:_lastButton.tag];
+    }
+    _selectIndex = btn.tag;
+    
     // 1. set last clicked button
     _lastButton.selected = NO;
     btn.selected = YES;
