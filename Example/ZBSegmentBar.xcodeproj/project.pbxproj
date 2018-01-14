@@ -28,6 +28,8 @@
 		E08324EB200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */; };
 		E08324EC200B429900870C79 /* ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E7200B429900870C79 /* ZBSegmentBar.m */; };
 		E08324ED200B429900870C79 /* ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E7200B429900870C79 /* ZBSegmentBar.m */; };
+		E08324F4200B55FE00870C79 /* ZBSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */; };
+		E08324F5200B55FE00870C79 /* ZBSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		E08324E7200B429900870C79 /* ZBSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBSegmentBar.m; sourceTree = "<group>"; };
 		E08324E8200B429900870C79 /* ZBSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBSegmentBar.h; sourceTree = "<group>"; };
 		E08324E9200B429900870C79 /* UIView+ZBSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZBSegmentBar.h"; sourceTree = "<group>"; };
+		E08324F2200B55FE00870C79 /* ZBSegmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBSegmentViewController.h; sourceTree = "<group>"; };
+		E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBSegmentViewController.m; sourceTree = "<group>"; };
 		F4421E55D6E821F3FF4A2617 /* Pods-ZBSegmentBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Tests/Pods-ZBSegmentBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FB449B0B7ABE014846F00B36 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +216,8 @@
 				E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */,
 				E08324E8200B429900870C79 /* ZBSegmentBar.h */,
 				E08324E7200B429900870C79 /* ZBSegmentBar.m */,
+				E08324F2200B55FE00870C79 /* ZBSegmentViewController.h */,
+				E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				E08324EA200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */,
 				6003F59E195388D20070C39A /* ZBSegmentBarAppDelegate.m in Sources */,
 				E08324EC200B429900870C79 /* ZBSegmentBar.m in Sources */,
+				E08324F4200B55FE00870C79 /* ZBSegmentViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* ZBSegmentBarViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -437,6 +444,7 @@
 			files = (
 				E08324EB200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */,
 				E08324ED200B429900870C79 /* ZBSegmentBar.m in Sources */,
+				E08324F5200B55FE00870C79 /* ZBSegmentViewController.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

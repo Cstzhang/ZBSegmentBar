@@ -7,40 +7,90 @@
 //
 
 #import "ZBSegmentBarViewController.h"
-#import "UIView+ZBSegmentBar.h"
-#import "ZBSegmentBar.h"
-@interface ZBSegmentBarViewController ()<ZBSegmentBarDelegate>
-@property (nonatomic, weak) ZBSegmentBar *segmentBar;
+#import "ZBSegmentViewController.h"
+
+@interface ZBSegmentBarViewController ()
+
+@property (nonatomic, weak) ZBSegmentViewController *segmentViewController;
+
 @end
 
 @implementation ZBSegmentBarViewController
-- (ZBSegmentBar *)segmentBar {
-    if (!_segmentBar) {
-        CGRect frame = CGRectMake(0, 20, self.view.width, 35);
-        ZBSegmentBar *segmentBar = [ZBSegmentBar segmentBarWithFrame:frame];
-        segmentBar.delegate = self;
-        segmentBar.backgroundColor = [UIColor brownColor];
-        [self.view addSubview:segmentBar];
-        _segmentBar = segmentBar;
-        
-    }
-    return _segmentBar;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.segmentBar.items = @[@"1专辑", @"1声音", @"1下载中", @"1已完成",@"1已删除",@"2专辑", @"2声音", @"2下载中", @"2已完成",@"2已删除",@"3专辑", @"3声音", @"3下载中", @"3已完成",@"3已删除"];
-}
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.segmentBar.selectIndex = 3;
-}
-
--(void)segmentBar:(ZBSegmentBar *)segmentBar didSelectIndex:(NSInteger)toIndex fromIndex:(NSInteger)fromIndex{
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    NSLog(@"fromIndex :%zd---- toIndex:%zd", fromIndex, toIndex);
+    self.segmentViewController.view.frame = self.view.bounds;
+    [self.view addSubview:self.segmentViewController.view];
+
+    NSArray *items = @[@"专辑", @"声音", @"下载中"];
+    
+    // add default childView in contenView and show it
+    
+    UIViewController *vc1 = [UIViewController new];
+    vc1.view.backgroundColor = [UIColor redColor];
+    
+    UIViewController *vc2 = [UIViewController new];
+    vc2.view.backgroundColor = [UIColor greenColor];
+    
+    UIViewController *vc3 = [UIViewController new];
+    vc3.view.backgroundColor = [UIColor yellowColor];
+    
+    [self.segmentViewController setUpWithItems:items childVCs:@[vc1, vc2, vc3]];
+    
+    // update contentView with more childView
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSArray *items = @[@"0专辑", @"1声音", @"2下载中", @"3已完成", @"4已完成", @"5已完成", @"6已完成", @"7已完成"];
+        
+        
+        // add  more  childView in contenView and show it
+        
+        UIViewController *vc1 = [UIViewController new];
+        vc1.view.backgroundColor = [UIColor redColor];
+        
+        UIViewController *vc2 = [UIViewController new];
+        vc2.view.backgroundColor = [UIColor greenColor];
+        
+        UIViewController *vc3 = [UIViewController new];
+        vc3.view.backgroundColor = [UIColor yellowColor];
+        
+        UIViewController *vc4 = [UIViewController new];
+        vc4.view.backgroundColor = [UIColor darkGrayColor];
+        
+        UIViewController *vc5 = [UIViewController new];
+        vc5.view.backgroundColor = [UIColor blackColor];
+        
+        UIViewController *vc6 = [UIViewController new];
+        vc6.view.backgroundColor = [UIColor orangeColor];
+        
+        UIViewController *vc7 = [UIViewController new];
+        vc7.view.backgroundColor = [UIColor purpleColor];
+        
+        UIViewController *vc8 = [UIViewController new];
+        vc8.view.backgroundColor = [UIColor cyanColor];
+
+        [self.segmentViewController setUpWithItems:items childVCs:@[vc1, vc2, vc3, vc4,vc5,vc6,vc7,vc8]];
+
+    });
+    
 }
+
+
+#pragma mark — lazy func
+
+- (ZBSegmentViewController *)segmentViewController {
+    if (!_segmentViewController) {
+        ZBSegmentViewController *vc = [[ZBSegmentViewController alloc] init];
+        [self addChildViewController:vc];
+        _segmentViewController = vc;
+    }
+    return _segmentViewController;
+}
+
+
 
 @end

@@ -32,38 +32,7 @@
 
 + (instancetype)segmentBarWithFrame: (CGRect)frame {
     ZBSegmentBar *segmentBar = [[ZBSegmentBar alloc] initWithFrame:frame];
-    // add content view
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:frame];
-    scrollView.showsHorizontalScrollIndicator = NO;
-    [segmentBar addSubview:scrollView];
-    segmentBar.contentView = scrollView;
     return segmentBar;
-}
-
-/**
- itemBtns lazy func
-
- @return itemBtns
- */
-- (NSMutableArray<UIButton *> *)itemBtns {
-    if (!_itemBtns) {
-        _itemBtns = [NSMutableArray array];
-    }
-    return _itemBtns;
-}
-/**
-  indicatorView (line) lazy func
- 
- @return indicatorView (line)
- */
-- (UIView *)indicatorView {
-    if (!_indicatorView) {
-        UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - KIndicatorH, 0, KIndicatorH)];
-        indicatorView.backgroundColor = [UIColor redColor];
-        [self.contentView addSubview:indicatorView];
-        _indicatorView = indicatorView;
-    }
-    return _indicatorView;
 }
 
 - (void)setSelectIndex:(NSInteger)selectIndex {
@@ -167,9 +136,54 @@ set title items
         lastX += btn.width + caculateMargin;
     }
     self.contentView.contentSize = CGSizeMake(lastX, 0);
+    
+    if (self.itemBtns.count == 0) {
+        return;
+    }
+    UIButton *btn = self.itemBtns[self.selectIndex];
+    self.indicatorView.width = btn.width;
+    self.indicatorView.centerX = btn.centerX;
+    self.indicatorView.y = self.height - self.indicatorView.height;
 
 }
 
+
+#pragma mark - 懒加载
+/**
+ itemBtns lazy func
+ 
+ @return itemBtns
+ */
+- (NSMutableArray<UIButton *> *)itemBtns {
+    if (!_itemBtns) {
+        _itemBtns = [NSMutableArray array];
+    }
+    return _itemBtns;
+}
+/**
+ indicatorView (line) lazy func
+ 
+ @return indicatorView (line)
+ */
+- (UIView *)indicatorView {
+    if (!_indicatorView) {
+        UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - KIndicatorH, 0, KIndicatorH)];
+        indicatorView.backgroundColor = [UIColor greenColor];
+        [self.contentView addSubview:indicatorView];
+        _indicatorView = indicatorView;
+    }
+    return _indicatorView;
+}
+
+- (UIScrollView *)contentView {
+    if (!_contentView) {
+        UIScrollView *scrollView = [[UIScrollView alloc] init];
+        scrollView.showsHorizontalScrollIndicator = NO;
+        [self addSubview:scrollView];
+        _contentView = scrollView;
+    }
+    return _contentView;
+}
 
 
 
