@@ -20,12 +20,32 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2018 Cstzhang. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yp-mW-RuY">
+                                <rect key="frame" x="49" y="632.5" width="277" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZBSegmentBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-Hp-y1g">
+                                <rect key="frame" x="121" y="100" width="133.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Yp-mW-RuY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6Rw-fJ-xi8"/>
+                            <constraint firstItem="8kd-Hp-y1g" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="77W-rb-oZU"/>
+                            <constraint firstItem="8kd-Hp-y1g" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eP0-qe-s1O"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="6Yp-mW-RuY" secondAttribute="bottom" constant="20" id="uE3-2F-H8I"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>

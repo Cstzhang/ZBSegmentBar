@@ -7,7 +7,8 @@
 //
 
 #import "ZBSegmentBarViewController.h"
-
+#import "UIView+ZBSegmentBar.h"
+#import "ZBSegmentBar.h"
 @interface ZBSegmentBarViewController ()
 
 @end
@@ -17,7 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    CGRect frame = CGRectMake(0, 0, self.view.width, 35);
+    ZBSegmentBar *segmentBar = [ZBSegmentBar segmentBarWithFrame:frame];
+    segmentBar.backgroundColor = [UIColor redColor];
+    [self.view addSubview:segmentBar];
+    segmentBar.items = @[@"专辑", @"声音", @"下载中", @"已完成",@"已删除"];
+//    segmentBar.items = @[@"专辑", @"声音", @"下载中"];
 }
 
 - (void)didReceiveMemoryWarning

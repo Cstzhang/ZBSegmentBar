@@ -24,6 +24,10 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		95363232C9F9647622AB41BE /* Pods_ZBSegmentBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8CFB0CD1411E68DD026307 /* Pods_ZBSegmentBar_Example.framework */; };
+		E08324EA200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */; };
+		E08324EB200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */; };
+		E08324EC200B429900870C79 /* ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E7200B429900870C79 /* ZBSegmentBar.m */; };
+		E08324ED200B429900870C79 /* ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E7200B429900870C79 /* ZBSegmentBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3925D4F20BD9C64635BE769B /* Pods-ZBSegmentBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Tests/Pods-ZBSegmentBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4AFD901F62F3A5A8665073B9 /* ZBSegmentBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZBSegmentBar.podspec; path = ../ZBSegmentBar.podspec; sourceTree = "<group>"; };
+		4AFD901F62F3A5A8665073B9 /* ZBSegmentBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZBSegmentBar.podspec; path = ../ZBSegmentBar.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ZBSegmentBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBSegmentBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,9 +68,13 @@
 		BF8CFB0CD1411E68DD026307 /* Pods_ZBSegmentBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZBSegmentBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01F8968D27EEF53434A36F6 /* Pods-ZBSegmentBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Example/Pods-ZBSegmentBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C83069176FB43AB1493E71DE /* Pods-ZBSegmentBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Example/Pods-ZBSegmentBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D53B1DF158ABEB36292C4F38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D53B1DF158ABEB36292C4F38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZBSegmentBar.m"; sourceTree = "<group>"; };
+		E08324E7200B429900870C79 /* ZBSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBSegmentBar.m; sourceTree = "<group>"; };
+		E08324E8200B429900870C79 /* ZBSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBSegmentBar.h; sourceTree = "<group>"; };
+		E08324E9200B429900870C79 /* UIView+ZBSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZBSegmentBar.h"; sourceTree = "<group>"; };
 		F4421E55D6E821F3FF4A2617 /* Pods-ZBSegmentBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Tests/Pods-ZBSegmentBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FB449B0B7ABE014846F00B36 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FB449B0B7ABE014846F00B36 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +151,7 @@
 		6003F593195388D20070C39A /* Example for ZBSegmentBar */ = {
 			isa = PBXGroup;
 			children = (
+				E08324E5200B427C00870C79 /* Classes */,
 				6003F59C195388D20070C39A /* ZBSegmentBarAppDelegate.h */,
 				6003F59D195388D20070C39A /* ZBSegmentBarAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -196,6 +205,17 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		E08324E5200B427C00870C79 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E08324E9200B429900870C79 /* UIView+ZBSegmentBar.h */,
+				E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */,
+				E08324E8200B429900870C79 /* ZBSegmentBar.h */,
+				E08324E7200B429900870C79 /* ZBSegmentBar.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,7 +267,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZBSegmentBar;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Cstzhang;
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -403,7 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08324EA200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */,
 				6003F59E195388D20070C39A /* ZBSegmentBarAppDelegate.m in Sources */,
+				E08324EC200B429900870C79 /* ZBSegmentBar.m in Sources */,
 				6003F5A7195388D20070C39A /* ZBSegmentBarViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -413,6 +435,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08324EB200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */,
+				E08324ED200B429900870C79 /* ZBSegmentBar.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,19 +487,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -503,18 +538,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
