@@ -12,11 +12,16 @@
 /// space min width
 #define kMinMargin 30
 
-@interface ZBSegmentBar ()
-// main content view
+@interface ZBSegmentBar (){
+    /// the last clicked title button
+    UIButton *_lastButton;
+}
+/// main content view
 @property (nonatomic, weak) UIScrollView *contentView;
 /// title button
 @property (nonatomic, strong) NSMutableArray <UIButton *>*itemBtns;
+/// indicator View
+@property (nonatomic, weak) UIView *indicatorView;
 
 @end
 
@@ -33,7 +38,6 @@
     return segmentBar;
 }
 
-
 /**
  itemBtns lazy func
 
@@ -45,7 +49,21 @@
     }
     return _itemBtns;
 }
-
+/**
+  indicatorView (line) lazy func
+ 
+ @return indicatorView (line)
+ */
+- (UIView *)indicatorView {
+    if (!_indicatorView) {
+        CGFloat indicatorH = 2;
+        UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - indicatorH, 0, indicatorH)];
+        indicatorView.backgroundColor = [UIColor redColor];
+        [self.contentView addSubview:indicatorView];
+        _indicatorView = indicatorView;
+    }
+    return _indicatorView;
+}
 
 /**
 set title items
@@ -60,6 +78,9 @@ set title items
     // add item buttons in content view
     for (NSString *item in items) {
         UIButton *btn = [[UIButton alloc] init];
+        [btn addTarget:self action:@selector(btnClick:)    forControlEvents:UIControlEventTouchDown];
+        [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
         [btn setTitle:item forState:UIControlStateNormal];
         [self.contentView addSubview:btn];
         [self.itemBtns addObject:btn];
@@ -70,6 +91,35 @@ set title items
     
 }
 
+/**
+ title button click
+
+ @param btn button clicked
+ */
+- (void)btnClick: (UIButton *)btn {
+    // 1. set last clicked button
+    _lastButton.selected = NO;
+    btn.selected = YES;
+    _lastButton = btn;
+    
+    // 2. add animation
+    [UIView animateWithDuration:0.1 animations:^{
+        self.indicatorView.width = btn.width;
+        self.indicatorView.centerX = btn.centerX;
+    }];
+    
+    // 3. indicatorView (line)  scroll to button
+    CGFloat scrollX = btn.centerX - self.contentView.width * 0.5;
+    // need not scroll
+    if (scrollX < 0) {
+        scrollX = 0;
+    }
+    // set  max scroll X
+    if (scrollX > self.contentView.contentSize.width - self.contentView.width) {
+        scrollX = self.contentView.contentSize.width - self.contentView.width;
+    }
+    [self.contentView setContentOffset:CGPointMake(scrollX, 0) animated:YES];
+}
 
 /**
  update the layout
