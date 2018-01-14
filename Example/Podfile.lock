@@ -1,0 +1,16 @@
+PODS:
+  - ZBSegmentBar (0.1.0)
+
+DEPENDENCIES:
+  - ZBSegmentBar (from `../`)
+
+EXTERNAL SOURCES:
+  ZBSegmentBar:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ZBSegmentBar: 6ba2479885bdd35bdb05f87ea068f7eba4c7388e
+
+PODFILE CHECKSUM: 84d7f86113a03c26bda73cc0760a7932a67af61c
+
+COCOAPODS: 1.3.1

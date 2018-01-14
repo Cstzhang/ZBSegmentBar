@@ -1,0 +1,22 @@
+{
+  "name": "ZBSegmentBar",
+  "version": "0.1.0",
+  "summary": "A short description of ZBSegmentBar.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Cstzhang/ZBSegmentBar",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Cstzhang": "835066041@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/Cstzhang/ZBSegmentBar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZBSegmentBar/Classes/**/*"
+}
