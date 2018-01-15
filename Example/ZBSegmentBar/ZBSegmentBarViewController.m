@@ -26,7 +26,6 @@
     self.segmentViewController.segmentBar.frame = CGRectMake(0, 0, 300, 35);
     self.navigationItem.titleView = self.segmentViewController.segmentBar;
     
-    
     self.segmentViewController.view.frame = self.view.bounds;
     [self.view addSubview:self.segmentViewController.view];
 

@@ -63,12 +63,17 @@
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    self.contentView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
-    self.segmentBar.frame = CGRectMake(0, 60, self.view.width, 35);
-    CGFloat contentViewY = self.segmentBar.y + self.segmentBar.height;
-    CGRect  contentFrame = CGRectMake(0, contentViewY, self.view.width,
-                                      self.view.height - contentViewY);
+    if (self.segmentBar.superview == self.view) {
+        self.segmentBar.frame = CGRectMake(0, 60, self.view.width, 35);
+        CGFloat contentViewY = self.segmentBar.y + self.segmentBar.height;
+        CGRect  contentFrame = CGRectMake(0, contentViewY, self.view.width, self.view.height - contentViewY);
+        self.contentView.frame = contentFrame;
+        self.contentView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
+        return;
+    }
+    CGRect contentFrame = CGRectMake(0, 0,self.view.width,self.view.height);
     self.contentView.frame = contentFrame;
+    self.contentView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
 }
 
 #pragma mark - segmentBar delegate func

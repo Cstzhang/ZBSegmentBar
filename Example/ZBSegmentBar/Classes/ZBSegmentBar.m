@@ -130,6 +130,7 @@ set title items
     if (caculateMargin < kMinMargin) {
         caculateMargin = kMinMargin;
     }
+    
     // caculate contentView contentSize
     CGFloat lastX = caculateMargin;
     for (UIButton *btn in self.itemBtns) {
@@ -138,6 +139,7 @@ set title items
         btn.x = lastX;
         lastX += btn.width + caculateMargin;
     }
+    
     self.contentView.contentSize = CGSizeMake(lastX, 0);
     
     if (self.itemBtns.count == 0) {
