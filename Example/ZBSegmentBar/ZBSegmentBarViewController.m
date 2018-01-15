@@ -77,6 +77,11 @@
         vc8.view.backgroundColor = [UIColor cyanColor];
 
         [self.segmentViewController setUpWithItems:items childVCs:@[vc1, vc2, vc3, vc4,vc5,vc6,vc7,vc8]];
+        /// Chain programming
+        [self.segmentViewController.segmentBar updateWithConfig:^(ZBSegmentBarConfig *config) {
+            config.itemTitleSelectColor([UIColor yellowColor]).indicatorBackColor([UIColor yellowColor]).indicatorEH(1).itemTitleNormalColor([UIColor whiteColor]);
+        }];
+        
 
     });
     

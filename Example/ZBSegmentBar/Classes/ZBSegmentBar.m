@@ -24,6 +24,8 @@
 @property (nonatomic, strong) NSMutableArray <UIButton *>*itemBtns;
 /// indicator View
 @property (nonatomic, weak) UIView *indicatorView;
+/// ZBSegmentBar Config
+@property (nonatomic, strong) ZBSegmentBarConfig *config;
 
 @end
 
@@ -35,6 +37,31 @@
 + (instancetype)segmentBarWithFrame: (CGRect)frame {
     ZBSegmentBar *segmentBar = [[ZBSegmentBar alloc] initWithFrame:frame];
     return segmentBar;
+}
+
+/// override
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = self.config.segmentBarBackColor;
+    }
+    return self;
+}
+
+- (void)updateWithConfig:(void (^)(ZBSegmentBarConfig *))configBlick{
+    if (configBlick) {
+        configBlick(self.config);
+    }
+    // 按照当前的 self.config 进行刷新
+    self.backgroundColor = self.config.segmentBarBackColor;
+    for (UIButton *btn in self.itemBtns) {
+        [btn setTitleColor:self.config.itemNormalColor forState:UIControlStateNormal];
+        [btn setTitleColor:self.config.itemSelectColor forState:UIControlStateSelected];
+        btn.titleLabel.font = self.config.itemFont;
+    }
+    // 指示器
+    self.indicatorView.backgroundColor = self.config.indicatorColor;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
 - (void)setSelectIndex:(NSInteger)selectIndex {
@@ -63,8 +90,9 @@ set title items
         UIButton *btn = [[UIButton alloc] init];
         btn.tag = self.itemBtns.count;// add button tags
         [btn addTarget:self action:@selector(btnClick:)    forControlEvents:UIControlEventTouchDown];
-        [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
+        [btn setTitleColor:self.config.itemNormalColor forState:UIControlStateNormal];
+        [btn setTitleColor:self.config.itemSelectColor forState:UIControlStateSelected];
+        btn.titleLabel.font = self.config.itemFont;
         [btn setTitle:item forState:UIControlStateNormal];
         [self.contentView addSubview:btn];
         [self.itemBtns addObject:btn];
@@ -146,8 +174,9 @@ set title items
         return;
     }
     UIButton *btn = self.itemBtns[self.selectIndex];
-    self.indicatorView.width = btn.width;
+    self.indicatorView.width = btn.width + self.config.indicatorExtraW * 2;
     self.indicatorView.centerX = btn.centerX;
+    self.indicatorView.height = self.config.indicatorHeight;
     self.indicatorView.y = self.height - self.indicatorView.height;
 
 }
@@ -172,8 +201,9 @@ set title items
  */
 - (UIView *)indicatorView {
     if (!_indicatorView) {
-        UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - KIndicatorH, 0, KIndicatorH)];
-        indicatorView.backgroundColor = [UIColor greenColor];
+        CGFloat indicatorH = self.config.indicatorHeight;
+        UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - indicatorH, 0, indicatorH)];
+        indicatorView.backgroundColor = self.config.indicatorColor;
         [self.contentView addSubview:indicatorView];
         _indicatorView = indicatorView;
     }
@@ -188,6 +218,12 @@ set title items
         _contentView = scrollView;
     }
     return _contentView;
+}
+- (ZBSegmentBarConfig *)config {
+    if (!_config) {
+        _config = [ZBSegmentBarConfig defaultConfig];
+    }
+    return _config;
 }
 
 @end

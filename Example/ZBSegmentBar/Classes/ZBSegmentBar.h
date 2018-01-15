@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBSegmentBarConfig.h"
 
 @class ZBSegmentBar;
 
@@ -40,4 +41,11 @@
 @property (nonatomic, strong) NSArray <NSString *>*items;
 /// selected Index
 @property (nonatomic, assign) NSInteger selectIndex;
+/**
+ /// update ZBSegmentBar UI with Config
+
+ @param configBlick ZBSegmentBarConfig 
+ */
+-(void)updateWithConfig:(void(^)(ZBSegmentBarConfig *config))configBlick;
+
 @end
