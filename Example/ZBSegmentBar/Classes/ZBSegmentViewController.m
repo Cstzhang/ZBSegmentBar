@@ -7,13 +7,11 @@
 //
 
 #import "ZBSegmentViewController.h"
-#import "ZBSegmentBar.h"
 #import "UIView+ZBSegmentBar.h"
 @interface ZBSegmentViewController ()<ZBSegmentBarDelegate, UIScrollViewDelegate>
 
-@property (nonatomic, weak) ZBSegmentBar *segmentBar;
-
 @property (nonatomic, weak) UIScrollView *contentView;
+
 @end
 
 @implementation ZBSegmentViewController

@@ -23,9 +23,14 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    self.segmentViewController.segmentBar.frame = CGRectMake(0, 0, 300, 35);
+    self.navigationItem.titleView = self.segmentViewController.segmentBar;
+    
+    
     self.segmentViewController.view.frame = self.view.bounds;
     [self.view addSubview:self.segmentViewController.view];
 
+  
     NSArray *items = @[@"专辑", @"声音", @"下载中"];
     
     // add default childView in contenView and show it
@@ -45,7 +50,6 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         NSArray *items = @[@"0专辑", @"1声音", @"2下载中", @"3已完成", @"4已完成", @"5已完成", @"6已完成", @"7已完成"];
-        
         
         // add  more  childView in contenView and show it
         

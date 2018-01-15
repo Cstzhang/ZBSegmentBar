@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBSegmentBar.h"
 
 @interface ZBSegmentViewController : UIViewController
+
+@property (nonatomic, weak) ZBSegmentBar *segmentBar;
+
 /**
  Description
  

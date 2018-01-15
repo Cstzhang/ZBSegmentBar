@@ -30,6 +30,8 @@
 
 @implementation ZBSegmentBar
 
+#pragma mark — interface
+
 + (instancetype)segmentBarWithFrame: (CGRect)frame {
     ZBSegmentBar *segmentBar = [[ZBSegmentBar alloc] initWithFrame:frame];
     return segmentBar;
@@ -37,7 +39,8 @@
 
 - (void)setSelectIndex:(NSInteger)selectIndex {
     // data filtering
-    if (self.itemBtns.count == 0 || selectIndex < 0 || selectIndex > self.itemBtns.count - 1) {
+    if (self.itemBtns.count == 0 || selectIndex < 0 ||
+        selectIndex > self.itemBtns.count - 1) {
         return;
     }
     _selectIndex = selectIndex;
@@ -184,8 +187,5 @@ set title items
     }
     return _contentView;
 }
-
-
-
 
 @end
