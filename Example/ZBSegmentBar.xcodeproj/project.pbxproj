@@ -24,14 +24,6 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		95363232C9F9647622AB41BE /* Pods_ZBSegmentBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8CFB0CD1411E68DD026307 /* Pods_ZBSegmentBar_Example.framework */; };
-		E07490E3200C996F00DC88A3 /* ZBSegmentBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E07490E2200C996F00DC88A3 /* ZBSegmentBarConfig.m */; };
-		E07490E4200C996F00DC88A3 /* ZBSegmentBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E07490E2200C996F00DC88A3 /* ZBSegmentBarConfig.m */; };
-		E08324EA200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */; };
-		E08324EB200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */; };
-		E08324EC200B429900870C79 /* ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E7200B429900870C79 /* ZBSegmentBar.m */; };
-		E08324ED200B429900870C79 /* ZBSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324E7200B429900870C79 /* ZBSegmentBar.m */; };
-		E08324F4200B55FE00870C79 /* ZBSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */; };
-		E08324F5200B55FE00870C79 /* ZBSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,14 +65,6 @@
 		C01F8968D27EEF53434A36F6 /* Pods-ZBSegmentBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Example/Pods-ZBSegmentBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C83069176FB43AB1493E71DE /* Pods-ZBSegmentBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Example/Pods-ZBSegmentBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D53B1DF158ABEB36292C4F38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E07490E1200C996F00DC88A3 /* ZBSegmentBarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBSegmentBarConfig.h; sourceTree = "<group>"; };
-		E07490E2200C996F00DC88A3 /* ZBSegmentBarConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBSegmentBarConfig.m; sourceTree = "<group>"; };
-		E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZBSegmentBar.m"; sourceTree = "<group>"; };
-		E08324E7200B429900870C79 /* ZBSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBSegmentBar.m; sourceTree = "<group>"; };
-		E08324E8200B429900870C79 /* ZBSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBSegmentBar.h; sourceTree = "<group>"; };
-		E08324E9200B429900870C79 /* UIView+ZBSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZBSegmentBar.h"; sourceTree = "<group>"; };
-		E08324F2200B55FE00870C79 /* ZBSegmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBSegmentViewController.h; sourceTree = "<group>"; };
-		E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBSegmentViewController.m; sourceTree = "<group>"; };
 		F4421E55D6E821F3FF4A2617 /* Pods-ZBSegmentBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBSegmentBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBSegmentBar_Tests/Pods-ZBSegmentBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FB449B0B7ABE014846F00B36 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +143,6 @@
 		6003F593195388D20070C39A /* Example for ZBSegmentBar */ = {
 			isa = PBXGroup;
 			children = (
-				E08324E5200B427C00870C79 /* Classes */,
 				6003F59C195388D20070C39A /* ZBSegmentBarAppDelegate.h */,
 				6003F59D195388D20070C39A /* ZBSegmentBarAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -211,21 +194,6 @@
 				FB449B0B7ABE014846F00B36 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		E08324E5200B427C00870C79 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E08324E9200B429900870C79 /* UIView+ZBSegmentBar.h */,
-				E08324E6200B429900870C79 /* UIView+ZBSegmentBar.m */,
-				E08324E8200B429900870C79 /* ZBSegmentBar.h */,
-				E08324E7200B429900870C79 /* ZBSegmentBar.m */,
-				E08324F2200B55FE00870C79 /* ZBSegmentViewController.h */,
-				E08324F3200B55FE00870C79 /* ZBSegmentViewController.m */,
-				E07490E1200C996F00DC88A3 /* ZBSegmentBarConfig.h */,
-				E07490E2200C996F00DC88A3 /* ZBSegmentBarConfig.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,11 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E08324EA200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */,
-				E07490E3200C996F00DC88A3 /* ZBSegmentBarConfig.m in Sources */,
 				6003F59E195388D20070C39A /* ZBSegmentBarAppDelegate.m in Sources */,
-				E08324EC200B429900870C79 /* ZBSegmentBar.m in Sources */,
-				E08324F4200B55FE00870C79 /* ZBSegmentViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* ZBSegmentBarViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -449,11 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E08324EB200B429900870C79 /* UIView+ZBSegmentBar.m in Sources */,
-				E08324ED200B429900870C79 /* ZBSegmentBar.m in Sources */,
-				E08324F5200B55FE00870C79 /* ZBSegmentViewController.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
-				E07490E4200C996F00DC88A3 /* ZBSegmentBarConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

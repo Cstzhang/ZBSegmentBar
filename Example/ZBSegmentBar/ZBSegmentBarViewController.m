@@ -81,8 +81,6 @@
         [self.segmentViewController.segmentBar updateWithConfig:^(ZBSegmentBarConfig *config) {
             config.itemTitleSelectColor([UIColor yellowColor]).indicatorBackColor([UIColor yellowColor]).indicatorEH(1).itemTitleNormalColor([UIColor whiteColor]);
         }];
-        
-
     });
     
 }

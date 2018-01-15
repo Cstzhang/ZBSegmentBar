@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "UIView+ZBSegmentBar.h"
+#import "ZBSegmentBar.h"
+#import "ZBSegmentBarConfig.h"
+#import "ZBSegmentViewController.h"
 
 FOUNDATION_EXPORT double ZBSegmentBarVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZBSegmentBarVersionString[];
