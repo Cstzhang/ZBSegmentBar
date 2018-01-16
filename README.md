@@ -22,7 +22,7 @@ pod 'ZBSegmentBar'
 
 ## Author
 
-Cstzhang, 835066041@qq.com
+Cstzhang, devzhangzb@163.com
 
 ## License
 
